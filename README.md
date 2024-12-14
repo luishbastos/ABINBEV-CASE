@@ -22,7 +22,6 @@ O projeto segue a arquitetura medallion com as seguintes camadas:
 2. Python 3.x
 3. MinIO
 
-## Rodando localmente
 **Primeiramente, tenha o ambiente do docker instalado e configurado na sua máquina, e verifique as portas de rede sendo utilizadas**
 **Será necessário ter a porta 8080 aberta para acessar o airflow**
 **E a porta 9002 aberta para acessar o minio**
