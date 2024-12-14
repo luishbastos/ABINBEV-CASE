@@ -30,7 +30,7 @@ O projeto segue a arquitetura medallion com as seguintes camadas:
 Clone o projeto
 
 ```bash
-  git clone https://github.com/PedroCozzati/pipeline-airflow-etl-linkedin
+  git clone https://github.com/luishbastos/ABINBEV-CASE.git
 ```
 
 Instale as dependências
