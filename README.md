@@ -53,8 +53,7 @@ Utilize as credenciais:
 
 ### Executando o Pipeline
 O pipeline está configurado no Airflow. Após iniciar o Airflow,
-você pode acionar o DAG responsável pelo processo de ingestão,
-transformação e persistência dos dados. O DAG irá:
+você poderá executar o DAG brewery_data_pipeline que irá:
 - Buscar os dados da API Open Brewery DB.
 - Persistir os dados na camada Bronze.
 - Transformar e particionar os dados na camada Silver.
