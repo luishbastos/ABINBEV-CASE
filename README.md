@@ -1,7 +1,7 @@
 # BEES Data Engineering – Breweries Case
 
 ## Objetivo
-O objetivo deste projeto é demonstrar habilidades em consumir dados de uma API, transformá-los e persistí-los em um data lake seguindo a arquitetura medallion com três camadas: dados brutos, dados curados particionados por localização e uma camada analítica agregada.
+O objetivo deste projeto é demonstrar habilidades em consumir dados de uma API, transformá-los e persistí-los em um data lake seguindo a arquitetura medallion com três camadas: dados brutos, dados particionados por localização e uma camada analítica agregada.
 
 ## Stack Utilizada
 - **Airflow**: Orquestração de pipeline de dados.
@@ -63,34 +63,36 @@ você poderá executar o DAG brewery_data_pipeline que irá:
 ### Monitorando o Pipeline
 Para monitorar o progresso do pipeline, você pode acessar o log do Airflow.
 
-Acesse o log do DAG no endereço http://localhost:8080/admin/airflow/dag_stats?dag_id=brewery_data_pipeline.
+Acesse o log do DAG no endereço http://localhost:8080/dags/brewery_data_pipeline/grid
 
 Você pode também monitorar o progresso do pipeline no terminal do Airflow.
 
 Execute o comando:
-
+```bash
 docker compose logs -f airflow-scheduler
-
-### Removendo o Ambiente
-Para remover o ambiente, execute o seguinte comando:
-
-docker compose down
+```
 
 ### Como Acessar o MinIO
 O MinIO é um serviço de armazenamento de dados distribuído.
 Que está sendo utilizado para armazenar os dados brutos e transformados.
-
 
 Acesse http://localhost:9002.
 Faça login com as credenciais:
 - login: testtamura
 - senha: testtamura
 
-Testes
+### Removendo o Ambiente
+Para remover o ambiente, execute o seguinte comando:
+```bash
+docker compose down
+```
+
+### Testes
 O projeto inclui testes unitários para garantir que as transformações e persistências de dados estão funcionando corretamente.
 Para rodar os testes, execute o seguinte comando:
-
-**pytest**
+```bash
+pytest
+```
 
 ### Escolhas de Design e Trade-offs
 
