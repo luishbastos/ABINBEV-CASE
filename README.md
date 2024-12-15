@@ -41,7 +41,7 @@ Instale as dependências
 Identifique o diretório com o arquivo docker-compose e rode o comando:
 
 ```bash
-  docker-compose up -d
+  docker compose up --build
 ```
 
 ### Acessando o Airflow
