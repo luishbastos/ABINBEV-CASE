@@ -18,7 +18,7 @@ O projeto segue a arquitetura medallion com as seguintes camadas:
 ## Como Rodar o Projeto
 
 ### Pré-requisitos
-1. Docker
+1. Docker / Docker Desktop
 2. Python 3.x
 3. MinIO
 
@@ -26,7 +26,53 @@ O projeto segue a arquitetura medallion com as seguintes camadas:
 **Será necessário ter a porta 8080 aberta para acessar o airflow**
 **E a porta 9002 aberta para acessar o minio**
 
-Clone o projeto
+### Passo-a-Passo para Usar o Docker:
+1. Habilitar a Virtualização no BIOS
+**Acesse o BIOS/UEFI:**
+- Reinicie o computador e pressione a tecla para entrar no BIOS (normalmente F2, F10, F12, Delete ou Esc).
+- Localize a opção de virtualização:
+  Procure por configurações como Intel Virtualization Technology, VT-x, AMD-V ou algo similar, geralmente na aba Advanced ou CPU Configuration.
+- Habilite a virtualização:
+Altere a configuração para Enabled.
+Salve e reinicie:
+Salve as alterações (geralmente pressionando F10) e reinicie o computador.
+
+2. Instalar o Docker Desktop no Windows
+
+**Baixe o Docker Desktop:**
+1. Acesse o site oficial: Docker Desktop.
+
+2. Clique em Download for Windows.
+
+3. Execute o instalador:
+Abra o arquivo .exe baixado e siga as instruções na tela.
+
+4. Escolha os componentes:
+Certifique-se de selecionar Use WSL 2 instead of Hyper-V para usar o WSL 2 (Windows Subsystem for Linux).
+Caso o WSL 2 não esteja instalado, o instalador do Docker tentará instalá-lo automaticamente.
+
+5. Reinicie o computador
+
+6. Inicie o Docker Desktop:
+Abra o Docker Desktop pelo menu Iniciar.
+
+3. Verificar a Instalação do Docker
+
+**Verifique a versão instalada:**
+```bash
+docker --version
+```
+Deve retornar a versão do Docker instalada.
+
+**Teste o Docker:**
+```bash
+docker run hello-world
+```
+Você deve ver uma mensagem indicando que o Docker está funcionando corretamente.
+
+
+# Rodando Localmente
+## Clone o projeto
 
 ```bash
   git clone https://github.com/luishbastos/ABINBEV-CASE.git
@@ -39,7 +85,6 @@ Instale as dependências
 ```
 
 Identifique o diretório com o arquivo docker-compose e rode o comando:
-
 ```bash
   docker compose up --build
 ```
