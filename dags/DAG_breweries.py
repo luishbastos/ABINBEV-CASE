@@ -99,7 +99,8 @@ bronze_layer_task = PythonOperator(
     python_callable=bronze_layer_task,  # Task to load data into the bronze layer
     dag=dag,
     retries=3,
-    retry_delay=timedelta(minutes=5)
+    retry_delay=timedelta(minutes=5),
+    op_args=[fetch_task.output]
 )
 
 clean_data_task = PythonOperator(
